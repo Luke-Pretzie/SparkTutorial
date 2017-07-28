@@ -100,7 +100,7 @@ sudo apt-get install scala    // Installs Scala version 2.10.3, to work with Jav
 
 Open Scala REPL (Read-Evaluate-Print-Loop language shell. Only receives single inputs) :
 ```
-scala    
+scala    // Opens Scala REPL
 ```
 
 Test basic Scala commands to ensure program is working properly:
