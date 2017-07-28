@@ -7,11 +7,11 @@ This ReadMe is a guide to the installation and use of Apache Spark on Linux Ubun
 * The amount of data generated on a daily basis is monumental, and the rate at which this data is being produced is monumental. Through this tutorial I hope to give insight into the big impact that the Apache Spark software platform can have on the analysis of big data.
 * Software Versions: Spark Version 2.2.0, Java 6 or 7 (compatible with Scala 2.9.2) OR Java 8 (compatible with Scala 2.10.3+)
 
-### Who do I talk to? ###
+### Who do I talk to?
 
 * For questions, comments and concerns, please contact Luke Pretzie at lpretz2@uic.edu
 
-## Code Used in Tutorial ##
+## Code Used in Tutorial
 
 Determine which version of Java is currently installed:
 ```
