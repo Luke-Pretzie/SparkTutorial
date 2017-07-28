@@ -64,7 +64,7 @@ An RDD is a resilient and distributed collection of records spread over one or m
 * When the program reaches action/command 1, the executors process all the data, cache the result, and then resubmit it to the driver for eventual evaluation.
 * For actions/commands 2 and beyond, however, because most of the information is stored in the caches of the executors, we process straight from the cache without consulting the HDFS:
 
-![Alt text](https://raw.githubusercontent.com/Luke-Pretzie/SparkTutorial/master/Picture3.png)
+![Alt text](https://raw.githubusercontent.com/Luke-Pretzie/SparkTutorial/master/Picture4.png)
 
 ## Installation Procedures
 
