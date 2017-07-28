@@ -2,14 +2,53 @@
 
 This ReadMe is a guide to the installation and use of Apache Spark on Linux Ubuntu, with insight into the utility of Spark and examples of using Spark for big data applications
 
-### What is this repository for?
+### What is the purpose of this repository?
 
-* The amount of data generated on a daily basis is monumental, and the rate at which this data is being produced is monumental. Through this tutorial I hope to give insight into the big impact that the Apache Spark software platform can have on the analysis of big data.
-* Software Versions: Spark Version 2.2.0, Java 6 or 7 (compatible with Scala 2.9.2) OR Java 8 (compatible with Scala 2.10.3+)
+* The amount of data generated on a daily basis is monumental, and the rate at which this data is being produced is exponential. Through this tutorial I hope to give insight into the big impact that the Apache Spark software platform can have on the analysis of big data.
+
+### Necessary Software
+* Software Versions: Spark Version 2.2.0, Java 6 or 7 with with Scala 2.9.2 OR Java 8 with Scala 2.10.3+
+* Linux OS (Written in Ubuntu Distribution, exercise caution if using different distributions)
 
 ### Who do I talk to?
 
 * For questions, comments and concerns, please contact Luke Pretzie at lpretz2@uic.edu
+
+## The Impact of Big Data
+* 90% of the data in the world today has been created in the last two years alone.
+* US healthcare system alone could create $300 billion in value annually with proper applications of big data (Manyika et al.)
+
+![Alt text](https://media.nationalpriorities.org/uploads/total_spending_pie%2C__2015_enacted.png)
+ 
+### Big Data Software Tools: Their Importance & Current Applications
+ 
+* 2 big data methods: Hadoop and Spark
+    * Hadoop - Multiple computer nodes create the Hadoop Distributed File Systems (HDFS), sharing the load of computation between multiple computers, and the MapReduce algorithm, for for data distribution & processing   
+    * Spark - Borrows the HDFS concept and improves it; moving data into/out of files is faster, and info is saved over the whole network as opposed to individual computers. This technology is known as Resilient Distributed Datasets (RDDs)
+
+### Hadoop's MapReduce Algorithm
+
+* Hadoop uses the MapReduce algorithm
+    * Map converts one set of data into another set of data, breaking down individual elements into tuples
+    * Reduce takes the output from the map and combines the data tuples into smaller sets of tuples
+        * Tuples are lists which are difficult to change (Ceri et al., 1993)
+    * This data is distributed over the cluster and processed
+    * Takes a long time to write and read information to and from a disk
+    * Reading and writing is to assure that backups are made in case of failure
+
+![Alt text](https://cs.calvin.edu/courses/cs/374/exercises/12/lab/MapReduceWordCount.png)
+
+#### HDFS in 3 Sentences
+"This system is where the data sets you use in Spark are stored. HDFS has the ability to split a data set into partitions known as blocks. Copies of these blocks are stored on other servers in the Hadoop cluster. That is, an individual file is actually stored as smaller blocks that are replicated across multiple servers in the entire cluster”.
+                                    -IBM Analytics
+
+### What is an RDD?
+
+An RDD is a resilient and distributed collection of records spread over one or many partitions. This allows programmers to spread the load of the computation across many computers and solve problems faster (https://jaceklaskowski.gitbooks.io/mastering-apache-spark-2/spark-rdd.html) 
+
+* Resilient: Fault-tolerant, can recompute damaged or missing partitions (blocks) due to node failures
+* Distributed: Data resilient on multiple nodes in a cluster (HDFS)
+* Dataset: The collection of partitioned data itself
 
 ## Code Used in Tutorial
 
