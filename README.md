@@ -50,6 +50,10 @@ An RDD is a resilient and distributed collection of records spread over one or m
 * Distributed: Data resilient on multiple nodes in a cluster (HDFS)
 * Dataset: The collection of partitioned data itself
 
+***
+Here add the PPT images if possible
+***
+
 ## Code Used in Tutorial
 
 Determine which version of Java is currently installed:
