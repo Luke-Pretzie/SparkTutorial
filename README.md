@@ -166,8 +166,8 @@ An error message example which may be removed in the final draft:
 Example 2: Word Count
 ```
 val f = sc.textFile("README.md")                                                    // Saves the Read Me file as a variable
-val wc = f.flatMap( l => l.split(" ")).map(word => (word, 1)).reduceByKey(_ + _)    // Splits words after every space and lists                                                                                                                  their frequency
-wc.saveAsTextFile("wc_out")                                                         // Saves word count as text file in                                                                    directory
+val wc = f.flatMap( l => l.split(" ")).map(word => (word, 1)).reduceByKey(_ + _)    // Splits words after every space and lists their frequency
+wc.saveAsTextFile("wc_out")                                                         // Saves word count as text file in directory
 cd ~/Downloads/spark-2.2.0-bin-hadoop2.7/bin                                        // Takes us to bin directory
 cd wc_out.txt                                                                       // Changes directory to wc_out.txt folder
 vim part-00000                                                                      // Opens the first data partition file
