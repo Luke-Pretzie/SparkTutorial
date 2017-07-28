@@ -14,7 +14,9 @@ This ReadMe is a guide to the installation and use of Apache Spark on Linux Ubun
 
 * For questions, comments and concerns, please contact Luke Pretzie at lpretz2@uic.edu
 
-## The Impact of Big Data
+## Background
+
+### The Impact of Big Data
 * 90% of the data in the world today has been created in the last two years alone.
 * US healthcare system alone could create $300 billion in value annually with proper applications of big data (Manyika et al.)
 
@@ -55,39 +57,42 @@ An RDD is a resilient and distributed collection of records spread over one or m
 * Spark processes data using a driver and executors
     * Driver: Initializes the work. Could be a desktop, laptop, etc.
     * Executors: The processors which are actually doing the computation, such as a supercomputer cluster or a server cluster
-* These executors read in the data as blocks from the HDFS
+* These executors read in the data as blocks from the HDFS:
 
 ![Alt text](https://raw.githubusercontent.com/Luke-Pretzie/SparkTutorial/master/Slide18.PNG)
 
 * When the program reaches action/command 1, the executors process all the data, cache the result, and then resubmit it to the driver for eventual evaluation.
-* For actions/commands 2 and beyond, however, because most of the information is stored in the caches of the executors, we process straight from the cache without consulting the HDFS
+* For actions/commands 2 and beyond, however, because most of the information is stored in the caches of the executors, we process straight from the cache without consulting the HDFS:
 
 ![Alt text](https://raw.githubusercontent.com/Luke-Pretzie/SparkTutorial/master/Slide20.PNG)
 
-## Code Used in Tutorial
+## Installation Procedures
 
-Determine which version of Java is currently installed:
+First, check to see which version of Java is already installed:
 ```
 ~~~
-java -version    
+java -version    // Tells you which version of Java you have
 ~~~
 ```
-Request updates for entire system:
+A message saying “Java can be found in the following packages…” means you most likely need to install Java.
+We will install the Java already packaged with Ubuntu. To do this:
 ```
-~~~
-sudo apt-get update  
-~~~
-```
-Install JDK (Java Development Kit)
-```
-~~~
-sudo apt-get install default-jdk    
+~~~            
+sudo add-apt-repository ppa:webupd8team/java -y    // Get Java 8 repository
+sudo apt-get update                                // Request updates for entire system
+sudo apt-get install oracle-java8-installer        // Get Java 8 installer
+sudo apt-get install oracle-java8-set-default      // Set Java 8 as default after it has been installed
 ~~~
 ```
+
+Note: Must use Scala 2.10 .3+ with Java 8 or Scala 2.9.2 with Java 6 or 7:
+
+    Scala -version    // Checks which version of Scala you have, if installed
+    
 Install Scala:
 ```
 ~~~
-sudo apt-get install scala      
+sudo apt-get install scala    // Installs Scala version 2.10.3, to work with Java 8
 ~~~
 ```
 Open Scala REPL:
