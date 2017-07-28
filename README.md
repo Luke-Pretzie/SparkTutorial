@@ -70,7 +70,9 @@ An RDD is a resilient and distributed collection of records spread over one or m
 ![Alt text](https://raw.githubusercontent.com/Luke-Pretzie/SparkTutorial/master/Picture4.png)
 ***
 
-## Installation Procedures
+## Necessary Software Installation Procedures
+
+NOTE: All code will be entered using the Linux Ubuntu terminal. To open this terminal, press Ctrl+Alt+T while on the Ubuntu Desktop
 
 First, check to see which version of Java is already installed:
 ```
@@ -83,6 +85,7 @@ sudo add-apt-repository ppa:webupd8team/java -y    // Get Java 8 repository
 sudo apt-get update                                // Request updates for entire system
 sudo apt-get install oracle-java8-installer        // Get Java 8 installer
 sudo apt-get install oracle-java8-set-default      // Set Java 8 as default after it has been installed
+java -version                                      // Double check Java version
 ```
 
 Note: Must use Scala 2.10 .3+ with Java 8 or Scala 2.9.2 with Java 6 or 7:
@@ -95,60 +98,55 @@ Install Scala, if necessary:
 sudo apt-get install scala    // Installs Scala version 2.10.3, to work with Java 8
 ```
 
-Open Scala REPL (Read-Evaluate-Print-Loop:
+Open Scala REPL (Read-Evaluate-Print-Loop language shell. Only receives single inputs) :
 ```
-~~~
 scala    
-~~~
 ```
 
 Test basic Scala commands to ensure program is working properly:
 ```
-~~~
 println("Hello World")                  // Prints text within quotation marks to screen
-~~~
 ```
 
-Determine which version of Scala you have to check compatibility with JDK:
+Exit out of REPL and check Scala version to ensure compatability with JDK:
+
 ```
-~~~
-scala -version
-~~~
+:q                // Quits REPL
+scala -version    // Double check Scala version
 ```
 
-Git Installation Terminal Command (Useful for communicating with other Spark users, highly recommended):
+Now download git technology (Allows for easier communication and cooperation between programmers working on the same project or using the same software. Highly recommended to install):
 ```
-~~~
-sudo apt-get install git       
-~~~
+sudo apt-get install git    // Install git
+```
+
+Now it is time to install Spark:
+* Go to https://spark.apache.org/downloads.html & download pre-built for Hadoop[ 2.7 version of Spark (2.0 or later, preferably. This tutorial uses Spark 2.2.0 & therefore recommends it).
+* BE SURE TO USE THE MOZILLA FIREFOX BROWSER THAT COMES PRE-BUILT WITH UBUNTU FOR THIS TASK
+* Download .tgz file somewhere where it can be easily found (Downloads Folder, Home folder, etc.).
+* Change directory to where .tgz file is saved and open it:
+```
+cd                                                      // Goes to Home directory
+cd <Directory where you saved the tarball on Ubuntu>    // Goes to specified directory
+tar xvf spark-2.0.2-bin-hadoop2.7.tgz                   // Opens the Hadoop “tarball” (Archive File)
 ```
 
 Run Spark Shell:
 ```
-~~~
 cd spark-2.0.2-bin-hadoop2.7            // Change directory to Spark folder
-
 cd bin                                  // Change directory to bin folder
-
 ./spark-shell                           // Run the Spark shell (Should result in a popup)
-
 println("Spark shell is running")       // Prints text within quotation marks to screen
-~~~
 ```
 
-Basic Spark Exercise:
+Basic Spark Exercise - Filter a list of integers:
 ```
-~~~
 val data = 1 to 10000                   // Creates a collection of integers from 1 to 10000 using the Scala language
-
-val distData = sc.parallelize(data)     // Creates the RDD for the list of the integers from 1 to 10000 and saves it as a variable
-
+val distData = sc.parallelize(data)     // Creates the RDD for the list of the integers and saves it as a variable
 distData.filter( _ < 10 ).collect()     // Filters integers less than ten and saves them to an array
-~~~
 ```
 An error message example which may be removed in the final draft:
 ```
-~~~
 // ----------------------------Note: May erase this section in final draft--------------------------------------
 
     Val lines = sc.textFile("hdfs://�")                                     // Base RDD                                        
@@ -164,21 +162,13 @@ An error message example which may be removed in the final draft:
                                                                             // Continue filtering error messages as necessary
 
 //---------------------------------------------------------------------------------------------------------------
-~~~
 ```
 Example 2: Word Count
 ```
-~~~
 val f = sc.textFile("README.md")                                                    // Saves the Read Me file as a variable
-
-val wc = f.flatMap( l => l.split(" ")).map(word => (word, 1)).reduceByKey(_ + _)    // Splits words after every space and lists their frequency
-
-wc.saveAsTextFile("wc_out")                                                         // Saves word count as text file in directory
-
+val wc = f.flatMap( l => l.split(" ")).map(word => (word, 1)).reduceByKey(_ + _)    // Splits words after every space and lists                                                                                                                  their frequency
+wc.saveAsTextFile("wc_out")                                                         // Saves word count as text file in                                                                    directory
 cd ~/Downloads/spark-2.2.0-bin-hadoop2.7/bin                                        // Takes us to bin directory
-
 cd wc_out.txt                                                                       // Changes directory to wc_out.txt folder
-
 vim part-00000                                                                      // Opens the first data partition file
-~~~
 ```
