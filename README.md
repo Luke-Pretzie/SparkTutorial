@@ -135,7 +135,10 @@ Run Spark Shell:
 ```
 cd spark-2.0.2-bin-hadoop2.7            // Change directory to Spark folder
 cd bin                                  // Change directory to bin folder
-./spark-shell                           // Run the Spark shell (Should result in a popup)
+```
+At any point in time when navigating these directories in Bash (Not Scala), type "ls" to list what files are in the directory you are currently looking at. Typing ls in the bin directory shows a list of the files in there. Make note of the "beeline" and "spark-shell" files
+```
+./spark-shell                           // Run the Spark shell file, opening the Spark shell (Should result in a popup)
 println("Spark shell is running")       // Prints text within quotation marks to screen
 ```
 
@@ -165,12 +168,12 @@ An error message example which may be removed in the final draft:
 ```
 Example 2: Word Count
 ```
-val f = sc.textFile("README.md")                                                    // Saves the Read Me file as a variable
-val wc = f.flatMap( l => l.split(" ")).map(word => (word, 1)).reduceByKey(_ + _)    // Splits words after every space and lists their frequency
-wc.saveAsTextFile("wc_out")                                                         // Saves word count as text file in directory
-cd ~/Downloads/spark-2.2.0-bin-hadoop2.7/bin                                        // Takes us to bin directory
-cd wc_out.txt                                                                       // Changes directory to wc_out.txt folder
-vim part-00000                                                                      // Opens the first data partition file
+val f = sc.textFile("beeline")                                                     // Saves the beeline file as a variable
+val wc = f.flatMap( l => l.split(" ")).map(word => (word, 1)).reduceByKey(_ + _)   // Splits words after every space and lists their frequency
+wc.saveAsTextFile("bee_text")                                                      // Saves word count as text file in directory
+cd ~/Downloads/spark-2.2.0-bin-hadoop2.7/bin                                       // Takes us to bin directory
+cd bee_text                                                                        // Changes directory to wc_out.txt folder
+vim part-00000                                                                     // Opens the first data partition file
 ```
 
 
