@@ -70,19 +70,15 @@ An RDD is a resilient and distributed collection of records spread over one or m
 
 First, check to see which version of Java is already installed:
 ```
-~~~
 java -version    // Tells you which version of Java you have
-~~~
 ```
 A message saying “Java can be found in the following packages…” means you most likely need to install Java.
 We will install the Java already packaged with Ubuntu. To do this:
-```
-~~~            
+```          
 sudo add-apt-repository ppa:webupd8team/java -y    // Get Java 8 repository
 sudo apt-get update                                // Request updates for entire system
 sudo apt-get install oracle-java8-installer        // Get Java 8 installer
 sudo apt-get install oracle-java8-set-default      // Set Java 8 as default after it has been installed
-~~~
 ```
 
 Note: Must use Scala 2.10 .3+ with Java 8 or Scala 2.9.2 with Java 6 or 7:
