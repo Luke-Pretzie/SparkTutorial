@@ -1,8 +1,8 @@
-# Spark Tutorial ReadMe #
+# Spark Tutorial ReadMe
 
 This ReadMe is a guide to the installation and use of Apache Spark on Linux Ubuntu, with insight into the utility of Spark and examples of using Spark for big data applications
 
-### What is this repository for? ###
+### What is this repository for?
 
 * The amount of data generated on a daily basis is monumental, and the rate at which this data is being produced is monumental. Through this tutorial I hope to give insight into the big impact that the Apache Spark software platform can have on the analysis of big data.
 * Software Versions: Spark Version 2.2.0, Java 6 or 7 (compatible with Scala 2.9.2) OR Java 8 (compatible with Scala 2.10.3+)
