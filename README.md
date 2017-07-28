@@ -82,21 +82,22 @@ sudo apt-get install oracle-java8-set-default      // Set Java 8 as default afte
 ```
 
 Note: Must use Scala 2.10 .3+ with Java 8 or Scala 2.9.2 with Java 6 or 7:
+```
+scala -version    // Checks which version of Scala you have, if installed
+```
 
-    Scala -version    // Checks which version of Scala you have, if installed
-    
-Install Scala:
+Install Scala, if necessary:
 ```
-~~~
 sudo apt-get install scala    // Installs Scala version 2.10.3, to work with Java 8
-~~~
 ```
-Open Scala REPL:
+
+Open Scala REPL (Read-Evaluate-Print-Loop:
 ```
 ~~~
 scala    
 ~~~
 ```
+
 Test basic Scala commands to ensure program is working properly:
 ```
 ~~~
