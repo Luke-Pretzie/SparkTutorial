@@ -52,7 +52,7 @@ An RDD is a resilient and distributed collection of records spread over one or m
 * Distributed: Data resilient on multiple nodes in a cluster (HDFS)
 * Dataset: The collection of partitioned data itself
 
-### How Spark Works With RDDs and Why It Is Useful For Big Data Applications
+### How Spark Works With RDDs
 
 * Spark processes data using a driver and executors
     * Driver: Initializes the work. Could be a desktop, laptop, etc.
