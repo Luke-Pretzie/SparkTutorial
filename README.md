@@ -50,9 +50,19 @@ An RDD is a resilient and distributed collection of records spread over one or m
 * Distributed: Data resilient on multiple nodes in a cluster (HDFS)
 * Dataset: The collection of partitioned data itself
 
-***
-Here add the PPT images if possible
-***
+### How Spark Works With RDDs and Why It Is Useful For Big Data Applications
+
+* Spark processes data using a driver and executors
+    * Driver: Initializes the work. Could be a desktop, laptop, etc.
+    * Executors: The processors which are actually doing the computation, such as a supercomputer cluster or a server cluster
+* These executors read in the data as blocks from the HDFS
+
+![Alt text](https://raw.githubusercontent.com/Luke-Pretzie/SparkTutorial/master/Slide18.PNG)
+
+* When the program reaches action/command 1, the executors process all the data, cache the result, and then resubmit it to the driver for eventual evaluation.
+* For actions/commands 2 and beyond, however, because most of the information is stored in the caches of the executors, we process straight from the cache without consulting the HDFS
+
+![Alt text](https://raw.githubusercontent.com/Luke-Pretzie/SparkTutorial/master/Slide20.PNG)
 
 ## Code Used in Tutorial
 
