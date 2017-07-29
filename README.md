@@ -180,10 +180,10 @@ vim part-00000                                                                  
 ## Credits
 * https://medium.com/@josemarcialportilla/installing-scala-and-spark-on-ubuntu-5665ee4b62b1
 * https://www.ibm.com/analytics/us/en/technology/hadoop/hdfs/ 
-https://www.toptal.com/spark/introduction-to-apache-spark
-https://github.com/ceteri/intro_spark
-Hey, Tony; Pápay, Gyuri (2014). The Computing Universe: A Journey through a Revolution. Cambridge University Press. p. 76. ISBN 978-1-31612322-5
-https://media.nationalpriorities.org/uploads/total_spending_pie%2C__2015_enacted.png
-https://cs.calvin.edu/courses/cs/374/exercises/12/lab/MapReduceWordCount.png
-Ceri, Stefano, Katsumi Tanaka, and Shalom Tsur. Deductive and Object-oriented Databases: Third International Conference, DOOD '93, Phoenix, Arizona, USA, December 6-8, 1993: Proceedings. Berlin: Springer, 1993. Print.
-http://www.mckinsey.com/business-functions/digital-mckinsey/our-insights/big-data-the-next-frontier-for-innovation
+* https://www.toptal.com/spark/introduction-to-apache-spark
+* https://github.com/ceteri/intro_spark
+* Hey, Tony; Pápay, Gyuri (2014). The Computing Universe: A Journey through a Revolution. Cambridge University Press. p. 76. ISBN 978-1-31612322-5
+* https://media.nationalpriorities.org/uploads/total_spending_pie%2C__2015_enacted.png
+* https://cs.calvin.edu/courses/cs/374/exercises/12/lab/MapReduceWordCount.png
+* Ceri, Stefano, Katsumi Tanaka, and Shalom Tsur. Deductive and Object-oriented Databases: Third International Conference, DOOD '93, Phoenix, Arizona, USA, December 6-8, 1993: Proceedings. Berlin: Springer, 1993. Print.
+* http://www.mckinsey.com/business-functions/digital-mckinsey/our-insights/big-data-the-next-frontier-for-innovation
