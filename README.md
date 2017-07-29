@@ -1,4 +1,4 @@
-# Spark Tutorial ReadMe
+# Spark Tutorial
 
 This ReadMe is a guide to the installation and use of Apache Spark on Linux Ubuntu, with insight into the utility of Spark and examples of using Spark for big data applications
 
@@ -178,8 +178,8 @@ vim part-00000                                                                  
 
 
 ## Credits
-https://medium.com/@josemarcialportilla/installing-scala-and-spark-on-ubuntu-5665ee4b62b1
-https://www.ibm.com/analytics/us/en/technology/hadoop/hdfs/ 
+* https://medium.com/@josemarcialportilla/installing-scala-and-spark-on-ubuntu-5665ee4b62b1
+* https://www.ibm.com/analytics/us/en/technology/hadoop/hdfs/ 
 https://www.toptal.com/spark/introduction-to-apache-spark
 https://github.com/ceteri/intro_spark
 Hey, Tony; Pápay, Gyuri (2014). The Computing Universe: A Journey through a Revolution. Cambridge University Press. p. 76. ISBN 978-1-31612322-5
