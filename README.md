@@ -84,7 +84,7 @@ NOTE: In order to copy and paste code using the Linux Ubuntu terminal (activated
 * Ctrl+C: Copies text/photos/information from applications => Ctrl+Shift+C: Copies text/photos/information from Terminal Only
 * Ctrl+V: Pastes text/photos/information to applications   => Ctrl+Shift+V: Pastes text/photos/information to Terminal Only
 
-##### All code seen in this tutorial will be entered using the Linux Ubuntu terminal.
+#### All code seen in this tutorial will be entered using the Linux Ubuntu terminal.
 
 First, check to see which version of Java is already installed:
 ```
