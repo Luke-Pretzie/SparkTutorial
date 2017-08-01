@@ -76,9 +76,7 @@ An RDD is a resilient and distributed collection of records spread over one or m
 
 * Refer to https://linus.nci.nih.gov/bdge/installUbuntu.html for installation procedure of Linux Ubuntu on Oracle VirtualBox virtual machine. Read everything before the "BRB-DGE" link, the last sentence of the page.
     * Ensure that you set the amount of RAM to 4096 MB on the "Memory Size" tab, and set the size of the virtual hard drive to 100 GB on the "File location and size" tab. Follow all other procedures as listed.
-* For more information regarding the installation and usage, you can also refer the following link. Read everything before “Checking Your Shell Version”: https://github.com/pophipi/WEVOTE/blob/master/LINUXINSTALL.md
-    * From this tutorial comes information regarding the "Shared Clipboard:
-* A helpful feature in Ubuntu is the ability to copy & paste information from Windows to Linux, and vice versa. To activate this feature, go to the Devices menu in VirtualBox while running your virtual machine and setting the "Shared Clipboard" option to "bidirectional". This will allow you to copy files to and from your virtual machine to your actual computer.
+* For more information regarding the installation and usage, you can also refer the following link. Read everything before “Basic Shell Commands”: https://github.com/pophipi/WEVOTE/blob/master/LINUXINSTALL.md
 
 NOTE: In order to copy and paste code using the Linux Ubuntu terminal (activated by pressing Ctrl+Alt+T on the Ubuntu Desktop), you need to add shift to your Windows hotkey commands:
 
@@ -86,7 +84,7 @@ NOTE: In order to copy and paste code using the Linux Ubuntu terminal (activated
 * Ctrl+C: Copies text/photos/information from applications => Ctrl+Shift+C: Copies text/photos/information from Terminal Only
 * Ctrl+V: Pastes text/photos/information to applications   => Ctrl+Shift+V: Pastes text/photos/information to Terminal Only
 
-All code seen in this tutorial will be entered using the Linux Ubuntu terminal.
+##### All code seen in this tutorial will be entered using the Linux Ubuntu terminal.
 
 First, check to see which version of Java is already installed:
 ```
