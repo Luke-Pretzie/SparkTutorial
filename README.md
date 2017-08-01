@@ -129,11 +129,10 @@ Test basic Scala commands to ensure program is working properly:
 println("Hello World")                  // Prints text within quotation marks to screen
 ```
 
-Exit out of REPL and check Scala version to ensure compatability with JDK:
+Exit out of REPL:
 
 ```
-:q                // Quits REPL
-scala -version    // Double check Scala version
+:q                // Quits most REPLs that one can find
 ```
 
 Now download git technology (Allows for easier communication and cooperation between programmers working on the same project or using the same software. Highly recommended to install):
