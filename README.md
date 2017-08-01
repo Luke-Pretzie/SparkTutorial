@@ -8,7 +8,7 @@ This ReadMe is a guide to the installation and use of Apache Spark on Linux Ubun
 
 ### Necessary Software
 * Software Versions: Spark Version 2.2.0, Java 6 or 7 with with Scala 2.9.2 OR Java 8 with Scala 2.10.3+
-* Linux OS (Written in Ubuntu Distribution, exercise caution if using different distributions)
+* Linux OS (Written in Ubuntu 14.04 Distribution, exercise caution if using different distributions)
 
 ### Who do I talk to?
 
