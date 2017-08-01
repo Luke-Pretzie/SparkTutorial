@@ -142,7 +142,7 @@ Now it is time to install Spark:
 * Change directory to where .tgz file is saved and open it:
 ```
 cd                                                      // Goes to Home directory
-cd <Directory where you saved the tarball on Ubuntu>    // Goes to specified directory
+cd <Directory where you saved the .tgz file on Ubuntu>  // Goes to specified directory
 tar xvf spark-2.0.2-bin-hadoop2.7.tgz                   // Opens the Hadoop “tarball” (Archive File)
 ```
 
@@ -151,8 +151,9 @@ Run Spark Shell:
 cd spark-2.0.2-bin-hadoop2.7            // Change directory to Spark folder
 cd bin                                  // Change directory to bin folder
 ```
-At any point in time when navigating these directories in Bash (Not Scala), type "ls" to list what files are in the directory you are currently looking at. Typing ls in the bin directory shows a list of the files in there. Make note of the "beeline" and "spark-shell" files
+At any point in time when navigating these directories in Bash (Not Scala), type "ls" to list what files are in the directory you are currently looking at. Typing ls in the bin directory shows a list of the files in there. Make note of the "beeline" and "spark-shell" files:
 ```
+ls                                      // List all files and directories in the current directory
 ./spark-shell                           // Run the Spark shell file, opening the Spark shell (Should result in a popup)
 println("Spark shell is running")       // Prints text within quotation marks to screen
 ```
