@@ -105,9 +105,18 @@ Note: Must use Scala 2.10 .3+ with Java 8 or Scala 2.9.2 with Java 6 or 7:
 scala -version    // Checks which version of Scala you have, if installed
 ```
 
-Install Scala, if necessary:
+Install Scala, if necessary, using this code taken from https://gist.github.com/osipov/c2a34884a647c29765ed:
+    * This code also downloads sbt (Simple Build Tool), a useful feature for open source collaborations
 ```
-sudo apt-get install scala    // Installs Scala version 2.10.3, to work with Java 8
+sudo apt-get remove scala-library scala
+sudo wget www.scala-lang.org/files/archive/scala-2.10.4.deb
+sudo dpkg -i scala-2.10.4.deb
+sudo apt-get update
+sudo apt-get install scala
+wget http://scalasbt.artifactoryonline.com/scalasbt/sbt-native-packages/org/scala-sbt/sbt/0.12.4/sbt.deb
+sudo dpkg -i sbt.deb
+sudo apt-get update
+sudo apt-get install sbt
 ```
 
 Open Scala REPL (Read-Evaluate-Print-Loop language shell. Only receives single inputs) :
