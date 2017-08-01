@@ -138,7 +138,7 @@ sudo apt-get install git    // Install git
 Now it is time to install Spark:
 * Go to https://spark.apache.org/downloads.html & download pre-built for Hadoop[ 2.7 version of Spark (2.0 or later, preferably. This tutorial uses Spark 2.2.0 & therefore recommends it).
 * BE SURE TO USE THE MOZILLA FIREFOX BROWSER THAT COMES PRE-BUILT WITH UBUNTU FOR THIS TASK
-* Download .tgz file somewhere where it can be easily found (Downloads Folder, Home folder, etc.).
+* Save .tgz file somewhere where it can be easily found (Downloads Folder, Home folder, etc.).
 * Change directory to where .tgz file is saved and open it:
 ```
 cd                                                      // Goes to Home directory
