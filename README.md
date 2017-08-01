@@ -72,7 +72,21 @@ An RDD is a resilient and distributed collection of records spread over one or m
 
 ## Necessary Software Installation Procedures
 
-NOTE: All code will be entered using the Linux Ubuntu terminal. To open this terminal, press Ctrl+Alt+T while on the Ubuntu Desktop
+### Ubuntu Installation
+
+* Refer to https://linus.nci.nih.gov/bdge/installUbuntu.html for installation procedure of Linux Ubuntu on Oracle VirtualBox virtual machine. Read everything before the "BRB-DGE" link, the last sentence of the page.
+    * Ensure that you set the amount of RAM to 4096 MB on the "Memory Size" tab, and set the size of the virtual hard drive to 100 GB on the "File location and size" tab. Follow all other procedures as listed.
+* For more information regarding the installation and usage, you can also refer the following link. Read everything before “Checking Your Shell Version”: https://github.com/pophipi/WEVOTE/blob/master/LINUXINSTALL.md
+    * From this tutorial comes information regarding the "Shared Clipboard:
+* A helpful feature in Ubuntu is the ability to copy & paste information from Windows to Linux, and vice versa. To activate this feature, go to the Devices menu in VirtualBox while running your virtual machine and setting the "Shared Clipboard" option to "bidirectional". This will allow you to copy files to and from your virtual machine to your actual computer.
+
+NOTE: In order to copy and paste code using the Linux Ubuntu terminal (activated by pressing Ctrl+Alt+T on the Ubuntu Desktop), you need to add shift to your Windows hotkey commands:
+
+* Ctrl+X: Cuts text/photos/information from applications   => Ctrl+Shift+X: Cuts text/photos/information from Terminal Only
+* Ctrl+C: Copies text/photos/information from applications => Ctrl+Shift+C: Copies text/photos/information from Terminal Only
+* Ctrl+V: Pastes text/photos/information to applications   => Ctrl+Shift+V: Pastes text/photos/information to Terminal Only
+
+All code seen in this tutorial will be entered using the Linux Ubuntu terminal.
 
 First, check to see which version of Java is already installed:
 ```
@@ -177,7 +191,7 @@ vim part-00000                                                                  
 ```
 
 
-## Credits
+## Unlisted Credits
 * https://medium.com/@josemarcialportilla/installing-scala-and-spark-on-ubuntu-5665ee4b62b1
 * https://www.ibm.com/analytics/us/en/technology/hadoop/hdfs/ 
 * https://www.toptal.com/spark/introduction-to-apache-spark
