@@ -138,15 +138,15 @@ sudo apt-get install git    // Install git
 Now it is time to install Spark:
 * Go to https://spark.apache.org/downloads.html & download pre-built for Hadoop[ 2.7 version of Spark (2.0 or later, preferably. This tutorial uses Spark 2.2.0 & therefore recommends it).
 * BE SURE TO USE THE MOZILLA FIREFOX BROWSER THAT COMES PRE-BUILT WITH UBUNTU FOR THIS TASK
-* Save .tgz file somewhere where it can be easily found (Downloads Folder, Home folder, etc.).
+* Save .tgz file somewhere where it can be easily found (Saved to Downloads folder by default).
 * Change directory to where .tgz file is saved and open it:
 ```
 cd                                                      // Goes to Home directory
-cd <Directory where you saved the .tgz file on Ubuntu>  // Goes to specified directory
+cd <Directory where you saved the .tgz file on Ubuntu>  // Goes to specified directory; "cd Downloads" should be the default
 tar xvf spark-2.2.0-bin-hadoop2.7.tgz                   // Opens the Hadoop “tarball” (Archive File)
 ```
 
-Run Spark Shell:
+Run Spark Shell, starting from within the Downloads folder:
 ```
 cd spark-2.2.0-bin-hadoop2.7            // Change directory to Spark folder
 cd bin                                  // Change directory to bin folder
@@ -186,12 +186,11 @@ Example 2: Word Count
 ```
 val f = sc.textFile("beeline")                                                     // Saves the beeline file as a variable
 val wc = f.flatMap( l => l.split(" ")).map(word => (word, 1)).reduceByKey(_ + _)   // Splits words after every space and lists their frequency
-wc.saveAsTextFile("bee_text")                                                      // Saves word count as text file in directory
-cd ~/Downloads/spark-2.2.0-bin-hadoop2.7/bin                                       // Takes us to bin directory
-cd bee_text                                                                        // Changes directory to wc_out.txt folder
+wc.saveAsTextFile("beeText")                                                      // Saves word count as text file in directory
+:q                                                                                 // Quit Spark REPL
+cd beeText                                                                        // Changes directory to wc_out.txt folder
 vim part-00000                                                                     // Opens the first data partition file
 ```
-
 
 ## Unlisted Credits
 * https://medium.com/@josemarcialportilla/installing-scala-and-spark-on-ubuntu-5665ee4b62b1
