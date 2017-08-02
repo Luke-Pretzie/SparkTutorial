@@ -116,7 +116,7 @@ sudo apt-get install scala
 
 Open Scala REPL (Read-Evaluate-Print-Loop language shell. Only receives single inputs) :
 ```
-scala    // Opens Scala REPL
+scala                                   // Opens Scala REPL
 ```
 
 Test basic Scala commands to ensure program is working properly:
@@ -127,12 +127,16 @@ println("Hello World")                  // Prints text within quotation marks to
 Exit out of REPL:
 
 ```
-:q                // Quits most REPLs that one can find
+:q                                      // Quits most REPLs that one can find
 ```
 
+##### If for whatever reason you decide to switch from Scala 2.10.3+ and Java 8 to Scala 2.9.2 and Java 6 or 7, the following code will remove all Java related packages from the computer, allowing you to reinstall whatever software you desire:
+```
+dpkg-query -W -f='${binary:Package}\n' | grep -E -e '^(ia32-)?(sun|oracle)-java' -e '^openjdk-' -e '^icedtea' -e '^(default|gcj)-j(re|dk)' -e '^gcj-(.*)-j(re|dk)' -e '^java-common' | xargs sudo apt-get -y remove
+```
 Now download git technology (Allows for easier communication and cooperation between programmers working on the same project or using the same software. Highly recommended to install):
 ```
-sudo apt-get install git    // Install git
+sudo apt-get install git                // Install git
 ```
 
 Now it is time to install Spark:
@@ -186,9 +190,9 @@ Example 2: Word Count
 ```
 val f = sc.textFile("beeline")                                                     // Saves the beeline file as a variable
 val wc = f.flatMap( l => l.split(" ")).map(word => (word, 1)).reduceByKey(_ + _)   // Splits words after every space and lists their frequency
-wc.saveAsTextFile("beeText")                                                      // Saves word count as text file in directory
+wc.saveAsTextFile("beeText")                                                       // Saves word count as text file in directory
 :q                                                                                 // Quit Spark REPL
-cd beeText                                                                        // Changes directory to wc_out.txt folder
+cd beeText                                                                         // Changes directory to wc_out.txt folder
 vim part-00000                                                                     // Opens the first data partition file
 ```
 
