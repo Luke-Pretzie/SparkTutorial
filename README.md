@@ -161,7 +161,7 @@ ls                                      // List all files and directories in the
 println("Spark shell is running")       // Prints text within quotation marks to screen
 ```
 
-Basic Spark Exercise - Filter a list of integers:
+Now it is finally time for out first Spark exercise - Creating a list of integers and filtering it:
 ```
 val data = 1 to 10000                   // Creates a collection of integers from 1 to 10000 using the Scala language
 val distData = sc.parallelize(data)     // Creates the RDD for the list of the integers and saves it as a variable
@@ -185,7 +185,7 @@ An error message example which may be removed in the final draft:
 
 //---------------------------------------------------------------------------------------------------------------
 ```
-Example 2: Word Count
+A slightly more advanced example is where we search through a text file in order to find which words are used and how frequently:
 ```
 val f = sc.textFile("beeline")                                                     // Saves the beeline file as a variable
 val wc = f.flatMap( l => l.split(" ")).map(word => (word, 1)).reduceByKey(_ + _)   // Splits words after every space and lists their frequency
