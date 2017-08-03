@@ -97,7 +97,6 @@ sudo add-apt-repository ppa:webupd8team/java -y    // Get Java 8 repository
 sudo apt-get update                                // Request updates for entire system
 sudo apt-get install oracle-java8-installer        // Get Java 8 installer
 sudo apt-get install oracle-java8-set-default      // Set Java 8 as default after it has been installed
-java -version                                      // Double check Java version
 ```
 
 Note: Must use Scala 2.10 .3+ with Java 8 or Scala 2.9.2 with Java 6 or 7:
